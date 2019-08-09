@@ -30,7 +30,7 @@ public class Accumulator1 {
                 ", height=" + height +
                 ", width=" + width +
                 '}';
-
+//cvvcvcvcvc
         //test
     }
 
