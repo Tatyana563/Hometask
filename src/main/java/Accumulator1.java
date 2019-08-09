@@ -52,6 +52,8 @@ public class Accumulator1 {
         Collections.addAll(list,a1,a2,a3,a4,a5);
         a1.sort(list);
         System.out.println(list);
+        System.out.println(list);
+        System.out.println(list);
     }
 }
 
