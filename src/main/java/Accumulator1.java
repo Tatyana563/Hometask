@@ -30,6 +30,8 @@ public class Accumulator1 {
                 ", height=" + height +
                 ", width=" + width +
                 '}';
+
+        //test
     }
 
     public List<Accumulator1> sort (List<Accumulator1> accumulator1List){
