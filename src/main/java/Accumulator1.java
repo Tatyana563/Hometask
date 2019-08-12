@@ -9,7 +9,7 @@ public class Accumulator1 implements Comparable<Accumulator1>{
         this.name = name;
         this.height = height;
         this.width = width;
-
+// master branch
     }
 
     public Double getHeight() {
@@ -71,6 +71,8 @@ public class Accumulator1 implements Comparable<Accumulator1>{
         });
         System.out.println(list2);
         System.out.println("This is a branch_1");
+        System.out.println("Testing cherry peak");
+
 
     }
 
@@ -78,6 +80,7 @@ public class Accumulator1 implements Comparable<Accumulator1>{
     public int compareTo(Accumulator1 o) {
         return 0;
     }
+
 }
 
 
