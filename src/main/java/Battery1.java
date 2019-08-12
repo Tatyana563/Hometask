@@ -36,6 +36,7 @@ public class Battery1 {
         nameComparator1 nameComparator1 = new nameComparator1();
         Collections.sort(list, nameComparator1);
         System.out.println(list);
+        System.out.println("This is branch 1");
     }
 
 
