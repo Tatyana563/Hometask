@@ -1,9 +1,6 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
-public class Accumulator1 {
+public class Accumulator1 implements Comparable<Accumulator1>{
     String name;
     Double height;
     Double width;
@@ -32,7 +29,7 @@ public class Accumulator1 {
                 '}';
     }
 
-    public List<Accumulator1> sort (List<Accumulator1> accumulator1List){
+    public Collection<Accumulator1> sort (List<Accumulator1> accumulator1List){
         Comparator<Accumulator1> compareByName = Comparator
                 .comparing(Accumulator1::getHeight)
                 .thenComparing(Accumulator1::getWidth).reversed();
@@ -48,10 +45,38 @@ public class Accumulator1 {
         Accumulator1 a3 = new Accumulator1("a3",9.0,12.0);
         Accumulator1 a4 = new Accumulator1("a4",9.0,11.0);
         Accumulator1 a5 = new Accumulator1("a5",15.0,13.0);
-        List<Accumulator1> list = new ArrayList<>();
-        Collections.addAll(list,a1,a2,a3,a4,a5);
-        a1.sort(list);
-        System.out.println(list);
+        Set<Accumulator1> list = new TreeSet<>(Comparator
+                .comparing(Accumulator1::getHeight)
+                .thenComparing(Accumulator1::getWidth).reversed());
+        list.add(a1);
+        list.add(a2);
+        list.add(a3);
+        list.add(a4);
+        list.add(a5);
+
+        List<Accumulator1> list2 = new ArrayList<>();
+        list2.add(a1);
+        list2.add(a2);
+        list2.add(a3);
+        list2.add(a4);
+        list2.add(a5);
+        Collections.sort(list2, (Accumulator1 ac1, Accumulator1 ac2)->{
+            int compare1 = ac1.height.compareTo(ac2.height);
+            int compare2 = ac1.width.compareTo(ac2.width);
+
+            return compare1 == 0 && compare2 == 0 ? 0 :
+                    (compare1 + compare2 == 2 )? 1 :
+                            (compare1 > 0 &&  compare2 == 0) ? 1 : 0;
+
+        });
+        System.out.println(list2);
+        System.out.println("This is a master branch");
+
+    }
+
+   // @Override
+    public int compareTo(Accumulator1 o) {
+        return 0;
     }
 }
 

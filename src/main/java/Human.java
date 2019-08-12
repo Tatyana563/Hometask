@@ -38,13 +38,16 @@ public class Human {
     }
 
     public static void main(String[] args) {
-        List<Human> myList = new ArrayList<>();
+        Map<String, Human> myList = new HashMap<>();
         Human h1 = new Human("Tom","Prague","m",28);
         Human h2 = new Human("Jack","London","m",28);
         Human h3 = new Human("Mark","Rome","m",28);
         Human h4 = new Human("Alice","Odessa","f",28);
-        Collections.addAll(myList,h1,h2,h3,h4);
-        h1.findPerson("tom",myList);
+        myList.put(h1.getName(), h1);
+        myList.put(h2.getName(), h2);
+        myList.put(h3.getName(), h3);
+        myList.put(h4.getName(), h4);
+        System.out.println(myList.get("Tom"));
 
     }
 }

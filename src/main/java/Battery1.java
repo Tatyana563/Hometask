@@ -64,17 +64,10 @@ public class Battery1 {
 class nameComparator1 implements Comparator<Battery1> {
 
     public int compare(Battery1 o1, Battery1 o2) {
-        if (o1.capacity==o2.capacity) {
-            return 0;
-        }
-        if(o2.capacity<o1.capacity){
-            return 1;
-        }
-        else {
-            return -1;
-        }
+        return Integer.compare(o1.capacity, o2.capacity);
     }
 
 }
 
 
+○
