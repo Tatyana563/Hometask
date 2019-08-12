@@ -70,7 +70,7 @@ public class Accumulator1 implements Comparable<Accumulator1>{
 
         });
         System.out.println(list2);
-        System.out.println("This is a master branch");
+        System.out.println("This is a branch_1");
 
     }
 
