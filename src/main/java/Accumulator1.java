@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.*;
 
 public class Accumulator1 implements Comparable<Accumulator1>{
@@ -72,6 +73,8 @@ public class Accumulator1 implements Comparable<Accumulator1>{
         System.out.println(list2);
         System.out.println("This is a branch_1");
         System.out.println("Testing cherry peak");
+        System.out.println("testing merging");
+        
 
 
     }
