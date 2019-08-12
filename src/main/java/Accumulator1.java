@@ -38,6 +38,7 @@ public class Accumulator1 {
                 .thenComparing(Accumulator1::getWidth).reversed();
         Collections.sort(accumulator1List,compareByName);
         System.out.println(accumulator1List);
+        System.out.println("This is new branch");
 
         return accumulator1List;
     }
