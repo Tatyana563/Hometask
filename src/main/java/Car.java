@@ -35,20 +35,32 @@ public class Car implements Comparable<Car> {
     }
 
     public void compareListOfCars(List<Car> list, Set<Car> set) {
-            List<Car> resultList = new ArrayList<Car>();
-            resultList.addAll(0,list);
+        List<Car> resultList = new ArrayList<Car>();
+        resultList.addAll(0,list);
         List<Car> finalList = new ArrayList<Car>();
         List<Car> list2= new ArrayList<Car>(set);
 
-            for (int i = 0; i < list.size(); i ++) {
-                if(list2.get(i).year>list.get(i).year){
-                   resultList.add(list2.get(i));
-                }
+        for (int i = 0; i < list.size(); i ++) {
+            if(list2.get(i).year>list.get(i).year){
+                resultList.add(list2.get(i));
             }
-       // ArrayList<Car> b = (ArrayList<Car>)resultList.clone();
-
-            System.out.println(resultList);
         }
+        // ArrayList<Car> b = (ArrayList<Car>)resultList.clone();
+
+        System.out.println(resultList);
+    }
+    public void compareСarYears(List<Car> list, Set<Car> set) {
+        List<Car> resultList = new ArrayList<Car>();
+
+        for(Car c: set){
+           for(int i=0;i<list.size();i++){
+         if(c.year>(list.get(i).year)){
+               resultList.add(c);
+           }
+       }
+       }
+       System.out.println(resultList);
+    }
 
         @Override
     public boolean equals(Object o) {
@@ -76,14 +88,15 @@ public class Car implements Comparable<Car> {
             Set<Car> carSet = new TreeSet<Car>();
             carSet.add(c4);
             carSet.add(c5);
-        carSet.add(c6);// would not be added
+       // carSet.add(c6);// would not be added
 
 
-            Collections.addAll(carList,c1,c2,c3);
+            Collections.addAll(carList,c1,c2);
 
           //  System.out.println(carList);
        //System.out.println(carSet);
-        c1.compareListOfCars(carList,carSet);
+       // c1.compareListOfCars(carList,carSet);
+        c1.compareСarYears(carList,carSet);
 
         }
 
