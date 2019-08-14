@@ -60,19 +60,17 @@ public class Accumulator1 implements Comparable<Accumulator1>{
         list2.add(a3);
         list2.add(a4);
         list2.add(a5);
-        Collections.sort(list2, (Accumulator1 ac1, Accumulator1 ac2)->{
-            int compare1 = ac1.height.compareTo(ac2.height);
-            int compare2 = ac1.width.compareTo(ac2.width);
-
-            return compare1 == 0 && compare2 == 0 ? 0 :
-                    (compare1 + compare2 == 2 )? 1 :
-                            (compare1 > 0 &&  compare2 == 0) ? 1 : 0;
-
-        });
+//        Collections.sort(list2, (Accumulator1 ac1, Accumulator1 ac2)->{
+//            int compare1 = ac1.height.compareTo(ac2.height);
+//            int compare2 = ac1.width.compareTo(ac2.width);
+//
+//            return compare1 == 0 && compare2 == 0 ? 0 :
+//                    (compare1 + compare2 == 2 )? 1 :
+//                            (compare1 > 0 &&  compare2 == 0) ? 1 : 0;
+//
+//        });
         System.out.println(list2);
-        System.out.println("This is a branch_1");
-        System.out.println("Testing cherry peak");
-        System.out.println("testing merging");
+
 
 
 

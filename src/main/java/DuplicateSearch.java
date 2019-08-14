@@ -33,7 +33,7 @@ public class DuplicateSearch {
         DuplicateSearch d = new DuplicateSearch();
         String str ="  apple apple apple  ";
        d.searchDuplicates(str);
-       d.amountOfElements(str);
-        d.numberOfWords(str);
+      // d.amountOfElements(str);
+      //  d.numberOfWords(str);
     }
 }

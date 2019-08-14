@@ -70,4 +70,3 @@ class nameComparator1 implements Comparator<Battery1> {
 }
 
 
-○
