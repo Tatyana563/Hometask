@@ -17,7 +17,7 @@ public class FootballTeam {
                 "name='" + name + '\'' +
                 '}';
     }
-    public void findTheBestTeam(List<Footballer> listOfPlayers){
+    public void findTheBest(List<Footballer> listOfPlayers){
         int maxScore=0;
 Footballer footballer=new Footballer("f101",101,0,0,0);
         int maxScoreGame1=0;
@@ -44,12 +44,12 @@ footballer=listOfPlayers.get(i);
            }
 
         }
-        System.out.println("The best palyer's score Game1"+maxScoreGame1);
-        System.out.println("the best player Game1" + footballer);
+        System.out.println("The best palyer's score Game1:"+ maxScoreGame1);
+        System.out.println("the best player Game1:" + footballer);
 
 
 
-
+// Divide players into main and substitute teams
         List<Footballer> mainTeam = new ArrayList<>();
         List<Footballer> substituteTeam = new ArrayList<>();
     for(int i=0;i<listOfPlayers.size();i++){
@@ -90,9 +90,13 @@ footballer=listOfPlayers.get(i);
         System.out.println("Scores of substitute team game2:"+scoresubstituteTeamGame2);
         System.out.println("Scores of substitute team game3:"+scoresubstituteTeamGame3);
         int difference=0;
+        int difference1=0;
         difference=(scoreMainTeamGame1+scoreMainTeamGame2+scoreMainTeamGame3)-(scoresubstituteTeamGame1+scoresubstituteTeamGame2+scoresubstituteTeamGame3);
-        // Difference between main and sub teams in scores
-        System.out.println(difference);
+        // Difference between main and sub teams in scores for 3 games;
+        System.out.println("Difference in scores of main and sub teams for all games:"+ difference);
+        difference1=scoreMainTeamGame1-scoresubstituteTeamGame1;
+        //Difference between main and substitute teams in the 1st game;
+        System.out.println("Difference in scores of main and sub teams in the 1st game:"+ difference1);
     }
 
     public static void main(String[] args) {
@@ -109,7 +113,7 @@ footballer=listOfPlayers.get(i);
         Footballer f10 = new Footballer("f10",13,0,0,2);
         List<Footballer> footballers = new ArrayList<>();
         Collections.addAll(footballers,f1,f2,f3,f4,f5,f6,f7,f8,f9,f10);
-        footballTeam.findTheBestTeam(footballers);
+        footballTeam.findTheBest(footballers);
     }
 
 }
