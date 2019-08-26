@@ -14,14 +14,14 @@ public class highestFrequency {
         ArrayList<String> list1 = new ArrayList<>();
         Collections.addAll(list1, "lemon","lemon","lemon","lemon","apple", "apple", "pear", "orange", "orange", "orange","cherry","cherry","cherry","cherry","cherry");
         highestFrequency h = new highestFrequency();
-        h.createFrequencyList(list1,3);
+        h.createFrequencyList(list1,5);
     }
-
+    //Create hashmap to store word + its frequency
     public void createFrequencyList(List<String> list, Integer wordNumber) {
         List<Integer> result = new ArrayList<>();
         String key = "";
         int value = 0;
-        //Create hashmap to store word+ its frequency
+
         HashMap<String, Integer> hashmap = new HashMap<String, Integer>();
         for (int i = 0; i < list.size(); i++) {
             if (hashmap.containsKey(list.get(i))) {
@@ -40,13 +40,14 @@ public class highestFrequency {
 
         }
        // System.out.println(key);
+        //Create a list of values (number of words) and sort to see which are the most frequent)
         for (Map.Entry<String, Integer> map : hashmap.entrySet()){
           int resultValue= map.getValue();
           result.add(resultValue);
           Collections.sort(result, Collections.reverseOrder());
           //  System.out.println(result);
         }
-
+// Pick up only first 5(Wordnumber) words from the list - 5 most frequent
         for (Map.Entry<String, Integer> map : hashmap.entrySet()) {
             for (int i = 0; i < wordNumber; i++) {
                 if (map.getValue().equals(result.get(i))){
