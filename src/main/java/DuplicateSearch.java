@@ -31,9 +31,9 @@ public class DuplicateSearch {
 
     public static void main(String[] args) {
         DuplicateSearch d = new DuplicateSearch();
-        String str ="  apple apple apple  ";
+        String str ="  apple apple apple pear pear ";
        d.searchDuplicates(str);
-      // d.amountOfElements(str);
-      //  d.numberOfWords(str);
+       d.amountOfElements(str);
+        d.numberOfWords(str);
     }
 }

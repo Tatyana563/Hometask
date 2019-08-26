@@ -12,7 +12,7 @@ import java.util.*;
 public class highestFrequency {
     public static void main(String[] args) {
         ArrayList<String> list1 = new ArrayList<>();
-        Collections.addAll(list1, "lemon","lemon","lemon","lemon","apple", "apple", "pear", "orange", "orange", "orange","cherry","cherry","cherry","cherry","cherry");
+        Collections.addAll(list1, "lemon","lemon","lemon","lemon","apple", "apple", "pear", "orange", "orange", "orange","cherry","cherry","cherry","cherry","cherry","pineapple");
         highestFrequency h = new highestFrequency();
         h.createFrequencyList(list1,5);
     }

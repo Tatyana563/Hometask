@@ -2,7 +2,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
-
+//Разработать методы, при помощи которых можно будет производить операции
+// создания записи информации по машине, редактирование, удаление,
+// просмотр и просмотр всех сохраненных по какому-то критерию отбора (фильтрация).
+// Также нужны методы удаления всех данных и удаления данных за период
+// (к примеру удалить все машины у которых год выпуска от 1980 до 1999)
 public class Auto {
     List<Auto> list = new ArrayList<>();
     String manufacture;
@@ -20,7 +24,7 @@ public class Auto {
     @Override
     public String toString() {
         return "Auto{" +
-              
+
                 ", manufacture='" + manufacture + '\'' +
                 ", color='" + color + '\'' +
                 ", year=" + year +
@@ -83,9 +87,10 @@ public class Auto {
 //       c1.printCars(autoList);
 //       c1.deleteAllCars(autoList);
 //
-//        c1.filterCarByYear(autoList,2005);
-//        c1.deleteCarsProducedinAPeriod(autoList,2004,2007);
-c1.updateCars(c5, autoList);
-        c1.printCars(autoList);
+//       c1.filterCarByYear(autoList,2005);
+        c1.deleteCarsProducedinAPeriod(autoList,2004,2007);
+//c1.updateCars(c5, autoList);
+//        c1.printCars(autoList);
+
     }
 }
