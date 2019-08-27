@@ -48,6 +48,7 @@ public class Car implements Comparable<Car> {
         List<Car> finalList = new ArrayList<Car>();
         List<Car> list2= new ArrayList<Car>(set);
 
+
         for (int i = 0; i < list.size(); i ++) {
 for(int j=0;j<list2.size();j++) {
     if (list2.get(j).year > list.get(i).year) {
