@@ -1,7 +1,13 @@
 package oop;
 
 import java.util.*;
-
+//Сделать метод, на вход которого будет передаваться строка
+// (к примеру большой кусок текста) а результат работы метода
+// будет вывод информации на консоль, информация должна быть
+// следующего характера: сколько слов в тексте,
+// вывести первые 5 самым распространенных слов,
+// вывести 2 самых редких слова,
+// вывести количество символов исключая пробелы.
 public class HighFreq2 {
     public static void main(String[] args) {
         String in = "Lorem ipsum dolor sit amet amet amet amet amet amet amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore labore labore labore labore labore labore labore labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi nisi nisi nisi nisi nisi nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur Excepteur Excepteur Excepteur Excepteur Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit mollit mollit mollit mollit mollit anim id est laborum";
