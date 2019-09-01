@@ -62,20 +62,26 @@ for(int j=0;j<list2.size();j++) {
     }
     public void compareСarYears(List<Car> list, Set<Car> set) {
         List<Car> resultList = new ArrayList<>();
+        int maxYear=0;
+        for(int i=0;i<list.size();i++){
+            if(list.get(i).year>maxYear){
+                maxYear=list.get(i).year;
+            }
+        }
+
         resultList.addAll(0,list);
         for(Car c: set){
 
-            for(Car w: list){
-
-                   if(c.year>(w.year)){
+            if(c.year>(maxYear)){
                        resultList.add(c);
                    }
 
 
             }
+        System.out.println(resultList);
        }
-       System.out.println(resultList);
-    }
+
+
 
         @Override
     public boolean equals(Object o) {
@@ -102,8 +108,8 @@ for(int j=0;j<list2.size();j++) {
             List<Car> carList = new ArrayList<Car>();
             Set<Car> carSet = new TreeSet<Car>();
             carSet.add(c3);
-          //  carSet.add(c4);
-          //  carSet.add(c5);
+            carSet.add(c4);
+            carSet.add(c5);
        // carSet.add(c6);// would not be added
 
 
